@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-48a03b8ec1bb7497b4d9a10e04da5adb"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"type": "nominal", "field": "org_type", "title": "Type of organisation"}, "x": {"type": "temporal", "field": "year", "title": null}, "y": {"type": "quantitative", "axis": {"format": "%"}, "field": "value", "title": ["Share of company papers", "involving collaboratory type"]}}, "height": 200, "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-48a03b8ec1bb7497b4d9a10e04da5adb": [{"year": "2010-01-01T00:00:00", "value": 0.6578947368421053, "org_type": "Education"}, {"year": "2011-01-01T00:00:00", "value": 0.7582417582417582, "org_type": "Education"}, {"year": "2012-01-01T00:00:00", "value": 0.6847290640394089, "org_type": "Education"}, {"year": "2013-01-01T00:00:00", "value": 0.611764705882353, "org_type": "Education"}, {"year": "2014-01-01T00:00:00", "value": 0.7491166077738516, "org_type": "Education"}, {"year": "2015-01-01T00:00:00", "value": 0.7290167865707434, "org_type": "Education"}, {"year": "2016-01-01T00:00:00", "value": 0.6804733727810651, "org_type": "Education"}, {"year": "2017-01-01T00:00:00", "value": 0.6980428704566636, "org_type": "Education"}, {"year": "2018-01-01T00:00:00", "value": 0.6824167312161116, "org_type": "Education"}, {"year": "2019-01-01T00:00:00", "value": 0.5013297872340425, "org_type": "Education"}, {"year": "2020-01-01T00:00:00", "value": 0.48316755929609795, "org_type": "Education"}, {"year": "2021-01-01T00:00:00", "value": 0.4791666666666667, "org_type": "Education"}, {"year": "2010-01-01T00:00:00", "value": 0.07894736842105263, "org_type": "Company"}, {"year": "2011-01-01T00:00:00", "value": 0.02197802197802198, "org_type": "Company"}, {"year": "2012-01-01T00:00:00", "value": 0.054187192118226604, "org_type": "Company"}, {"year": "2013-01-01T00:00:00", "value": 0.027450980392156862, "org_type": "Company"}, {"year": "2014-01-01T00:00:00", "value": 0.08480565371024736, "org_type": "Company"}, {"year": "2015-01-01T00:00:00", "value": 0.06954436450839328, "org_type": "Company"}, {"year": "2016-01-01T00:00:00", "value": 0.04585798816568047, "org_type": "Company"}, {"year": "2017-01-01T00:00:00", "value": 0.05871388630009319, "org_type": "Company"}, {"year": "2018-01-01T00:00:00", "value": 0.06584043377226956, "org_type": "Company"}, {"year": "2019-01-01T00:00:00", "value": 0.028368794326241134, "org_type": "Company"}, {"year": "2020-01-01T00:00:00", "value": 0.025631216526396328, "org_type": "Company"}, {"year": "2021-01-01T00:00:00", "value": 0.013888888888888888, "org_type": "Company"}, {"year": "2010-01-01T00:00:00", "value": 0.05263157894736842, "org_type": "Government"}, {"year": "2011-01-01T00:00:00", "value": 0.03296703296703297, "org_type": "Government"}, {"year": "2012-01-01T00:00:00", "value": 0.03940886699507389, "org_type": "Government"}, {"year": "2013-01-01T00:00:00", "value": 0.01568627450980392, "org_type": "Government"}, {"year": "2014-01-01T00:00:00", "value": 0.04240282685512368, "org_type": "Government"}, {"year": "2015-01-01T00:00:00", "value": 0.02158273381294964, "org_type": "Government"}, {"year": "2016-01-01T00:00:00", "value": 0.04585798816568047, "org_type": "Government"}, {"year": "2017-01-01T00:00:00", "value": 0.02702702702702703, "org_type": "Government"}, {"year": "2018-01-01T00:00:00", "value": 0.03563129357087529, "org_type": "Government"}, {"year": "2019-01-01T00:00:00", "value": 0.014627659574468085, "org_type": "Government"}, {"year": "2020-01-01T00:00:00", "value": 0.016832440703902066, "org_type": "Government"}, {"year": "2021-01-01T00:00:00", "value": 0.020833333333333332, "org_type": "Government"}, {"year": "2010-01-01T00:00:00", "value": 0.0, "org_type": "Nonprofit"}, {"year": "2011-01-01T00:00:00", "value": 0.02197802197802198, "org_type": "Nonprofit"}, {"year": "2012-01-01T00:00:00", "value": 0.009852216748768473, "org_type": "Nonprofit"}, {"year": "2013-01-01T00:00:00", "value": 0.00784313725490196, "org_type": "Nonprofit"}, {"year": "2014-01-01T00:00:00", "value": 0.007067137809187279, "org_type": "Nonprofit"}, {"year": "2015-01-01T00:00:00", "value": 0.011990407673860911, "org_type": "Nonprofit"}, {"year": "2016-01-01T00:00:00", "value": 0.019230769230769232, "org_type": "Nonprofit"}, {"year": "2017-01-01T00:00:00", "value": 0.014911463187325256, "org_type": "Nonprofit"}, {"year": "2018-01-01T00:00:00", "value": 0.027110766847405113, "org_type": "Nonprofit"}, {"year": "2019-01-01T00:00:00", "value": 0.009308510638297872, "org_type": "Nonprofit"}, {"year": "2020-01-01T00:00:00", "value": 0.011094108645753635, "org_type": "Nonprofit"}, {"year": "2021-01-01T00:00:00", "value": 0.013888888888888888, "org_type": "Nonprofit"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

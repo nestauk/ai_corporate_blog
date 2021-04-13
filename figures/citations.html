@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-bcd804bdbbe95af0fa24be3db74e6fe9"}, "mark": {"type": "line", "point": true}, "encoding": {"color": {"type": "nominal", "field": "category", "sort": ["All", "top 100", "top 500", "top 1000"], "title": "Citation category"}, "x": {"type": "temporal", "field": "year_dt", "title": null}, "y": {"type": "quantitative", "axis": {"format": "%"}, "field": "m", "title": ["Share of company papers", "in citation category"]}}, "height": 300, "transform": [{"window": [{"op": "mean", "field": "share", "as": "m"}], "frame": [-2, 2], "groupby": ["year", "category"]}], "width": 250, "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-bcd804bdbbe95af0fa24be3db74e6fe9": [{"year": 2011, "share": 0.12359550561797752, "year_dt": "2011-01-01T00:00:00", "category": "top 100"}, {"year": 2012, "share": 0.15730337078651685, "year_dt": "2012-01-01T00:00:00", "category": "top 100"}, {"year": 2013, "share": 0.2, "year_dt": "2013-01-01T00:00:00", "category": "top 100"}, {"year": 2014, "share": 0.3977272727272727, "year_dt": "2014-01-01T00:00:00", "category": "top 100"}, {"year": 2015, "share": 0.47126436781609193, "year_dt": "2015-01-01T00:00:00", "category": "top 100"}, {"year": 2016, "share": 0.4235294117647059, "year_dt": "2016-01-01T00:00:00", "category": "top 100"}, {"year": 2017, "share": 0.35365853658536583, "year_dt": "2017-01-01T00:00:00", "category": "top 100"}, {"year": 2018, "share": 0.36231884057971014, "year_dt": "2018-01-01T00:00:00", "category": "top 100"}, {"year": 2019, "share": 0.14444444444444443, "year_dt": "2019-01-01T00:00:00", "category": "top 100"}, {"year": 2020, "share": 0.060240963855421686, "year_dt": "2020-01-01T00:00:00", "category": "top 100"}, {"year": 2011, "share": 0.10465116279069768, "year_dt": "2011-01-01T00:00:00", "category": "top 500"}, {"year": 2012, "share": 0.12189616252821671, "year_dt": "2012-01-01T00:00:00", "category": "top 500"}, {"year": 2013, "share": 0.15402298850574714, "year_dt": "2013-01-01T00:00:00", "category": "top 500"}, {"year": 2014, "share": 0.20574162679425836, "year_dt": "2014-01-01T00:00:00", "category": "top 500"}, {"year": 2015, "share": 0.2847058823529412, "year_dt": "2015-01-01T00:00:00", "category": "top 500"}, {"year": 2016, "share": 0.3524027459954233, "year_dt": "2016-01-01T00:00:00", "category": "top 500"}, {"year": 2017, "share": 0.34360189573459715, "year_dt": "2017-01-01T00:00:00", "category": "top 500"}, {"year": 2018, "share": 0.32409972299168976, "year_dt": "2018-01-01T00:00:00", "category": "top 500"}, {"year": 2019, "share": 0.19726027397260273, "year_dt": "2019-01-01T00:00:00", "category": "top 500"}, {"year": 2020, "share": 0.12295081967213115, "year_dt": "2020-01-01T00:00:00", "category": "top 500"}, {"year": 2011, "share": 0.09068627450980392, "year_dt": "2011-01-01T00:00:00", "category": "top 1000"}, {"year": 2012, "share": 0.10562571756601608, "year_dt": "2012-01-01T00:00:00", "category": "top 1000"}, {"year": 2013, "share": 0.13154831199068684, "year_dt": "2013-01-01T00:00:00", "category": "top 1000"}, {"year": 2014, "share": 0.16284680337756333, "year_dt": "2014-01-01T00:00:00", "category": "top 1000"}, {"year": 2015, "share": 0.22819593787335724, "year_dt": "2015-01-01T00:00:00", "category": "top 1000"}, {"year": 2016, "share": 0.30677764565992865, "year_dt": "2016-01-01T00:00:00", "category": "top 1000"}, {"year": 2017, "share": 0.29802955665024633, "year_dt": "2017-01-01T00:00:00", "category": "top 1000"}, {"year": 2018, "share": 0.29778393351800553, "year_dt": "2018-01-01T00:00:00", "category": "top 1000"}, {"year": 2019, "share": 0.22635658914728682, "year_dt": "2019-01-01T00:00:00", "category": "top 1000"}, {"year": 2020, "share": 0.1519756838905775, "year_dt": "2020-01-01T00:00:00", "category": "top 1000"}, {"year": 2011, "share": 0.076214405360134, "year_dt": "2011-01-01T00:00:00", "category": "All"}, {"year": 2012, "share": 0.09840038778477944, "year_dt": "2012-01-01T00:00:00", "category": "All"}, {"year": 2013, "share": 0.10067114093959731, "year_dt": "2013-01-01T00:00:00", "category": "All"}, {"year": 2014, "share": 0.11574642126789365, "year_dt": "2014-01-01T00:00:00", "category": "All"}, {"year": 2015, "share": 0.13322683706070287, "year_dt": "2015-01-01T00:00:00", "category": "All"}, {"year": 2016, "share": 0.14949137549756744, "year_dt": "2016-01-01T00:00:00", "category": "All"}, {"year": 2017, "share": 0.16868416915579312, "year_dt": "2017-01-01T00:00:00", "category": "All"}, {"year": 2018, "share": 0.16729298950369315, "year_dt": "2018-01-01T00:00:00", "category": "All"}, {"year": 2019, "share": 0.15483870967741936, "year_dt": "2019-01-01T00:00:00", "category": "All"}, {"year": 2020, "share": 0.13984592338968543, "year_dt": "2020-01-01T00:00:00", "category": "All"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
